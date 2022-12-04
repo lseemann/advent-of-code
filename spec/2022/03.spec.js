@@ -4,7 +4,7 @@ const {
   getSharedItemPriority,
   getBadgeForGroup,
   getPriorityForGroup,
-} = require("../helpers");
+} = require("../../2022/03/helpers");
 
 const rucksacks = [
   "vJrwpWtwJgWrhcsFMMfFFhFp",

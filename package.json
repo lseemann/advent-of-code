@@ -1,0 +1,22 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lseemann/advent-of-code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lseemann/advent-of-code/issues"
+  },
+  "homepage": "https://github.com/lseemann/advent-of-code#readme",
+  "devDependencies": {
+    "jasmine": "^4.5.0"
+  }
+}
