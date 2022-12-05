@@ -11,14 +11,11 @@ const stacks = parseCrates(data, NUMBER_OF_STACKS);
 const moves = parseMoves(data);
 const newStacks = makeMoves(stacks, moves, false);
 const tops = findTops(newStacks);
-
 console.log('Tops after moves', tops);
 
 // Part II
 
-const stacks2 = parseCrates(data, NUMBER_OF_STACKS);
-const moves2 = parseMoves(data);
-const newStacks2 = makeMoves(stacks2, moves2, true);
+const newStacks2 = makeMoves(stacks, moves, true);
 const tops2 = findTops(newStacks2);
 
 console.log('Tops after moves', tops2);

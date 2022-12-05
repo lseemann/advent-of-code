@@ -35,21 +35,23 @@ const parseMoves = (data) => {
 }
 
 const makeMoves = (stacks, moves, canMoveMultiples) => {
+  const newStacks = JSON.parse(JSON.stringify(stacks));
+
   moves.forEach(move => {
     const {count, origin, destination} = move;
   
     if (canMoveMultiples) {
-      const crates = stacks[origin - 1].splice(0, count);
-      stacks[destination - 1].unshift(...crates);
+      const crates = newStacks[origin - 1].splice(0, count);
+      newStacks[destination - 1].unshift(...crates);
     } else {
       for (let index = 0; index < count; index++) {
-        const crate = stacks[origin -1].shift();
-        stacks[destination -1].unshift(crate);
+        const crate = newStacks[origin -1].shift();
+        newStacks[destination -1].unshift(crate);
       }
     }
   });
 
-  return stacks;
+  return newStacks;
 }
 
 const findTops = (stacks) => {
