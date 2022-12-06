@@ -1,7 +1,5 @@
 const hasUniqueCharacters = (characters) => {
-  const repeats = characters.filter((c, i) => characters.lastIndexOf(c) !== i);
-
-  return repeats.length === 0;
+  return characters.every((c, i) => characters.lastIndexOf(c) === i);
 };
 
 const findFirstMarker = (buffer, markerLength) => {
