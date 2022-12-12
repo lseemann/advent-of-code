@@ -18,7 +18,7 @@ const parseData = (data) => {
   const monkeys = [];
   const divisors = [];
 
-  rawMonkeys.forEach((monkey, index) => {
+  rawMonkeys.forEach((monkey) => {
     const [, rawItems, rawOperation, rawTest, rawTrue, rawFalse] = monkey;
 
     const items = rawItems
@@ -74,7 +74,7 @@ const performOperations = (
   divisorProduct
 ) => {
   for (let index = 0; index < roundCount; index++) {
-    monkeys.forEach((monkey, mI) => {
+    monkeys.forEach((monkey) => {
       while (monkey.items.length > 0) {
         let item = monkey.items.shift();
         item = monkey.operation(item);
